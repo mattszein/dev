@@ -1,0 +1,7 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/google.toml"
+]
+
+[terminal]
+shell = { program = "/bin/zsh", args = ["-l"] }
