@@ -20,3 +20,5 @@ DefaultDependencies=no
 EOF
 
 sudo systemctl daemon-reload
+
+yay -S --noconfirm --needed lazygit

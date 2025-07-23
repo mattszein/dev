@@ -61,3 +61,5 @@ EOF
 
 # Call the function
 create_xinitrc
+
+cp -r /usr/share/hypr ~/.config/
