@@ -1,9 +1,10 @@
 #!/bin/bash
-yay -Sy --noconfirm --needed ttf-font-awesome noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra
+# yay -Sy --noconfirm --needed ttf-font-awesome noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra
 
 cd /tmp
 wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaMono.zip
 unzip CascadiaMono.zip -d CascadiaFont
+mkdir -p ~/.local/share/fonts
 cp CascadiaFont/CaskaydiaMonoNerdFont-Regular.ttf ~/.local/share/fonts
 cp CascadiaFont/CaskaydiaMonoNerdFont-Bold.ttf ~/.local/share/fonts
 cp CascadiaFont/CaskaydiaMonoNerdFont-Italic.ttf ~/.local/share/fonts

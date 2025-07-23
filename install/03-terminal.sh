@@ -5,6 +5,7 @@ yay -S --noconfirm --needed \
   wl-clipboard fastfetch btop \
   man tldr less whois plocate \
   alacritty \
-  zellij
+  zellij \
+  zsh
 
 mkdir -p ~/.config/alacritty/

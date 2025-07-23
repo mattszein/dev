@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Need gum to query for input
-yay -S --noconfirm --needed gum
+yay -S --noconfirm --needed gum ly
 
 # Configure identification
 echo -e "\nEnter identification for git and autocomplete..."
@@ -17,7 +17,7 @@ export GIT_USER_EMAIL=$(gum input --placeholder "Enter email address" --prompt "
 
 # Set identification from install inputs
 if [[ -n "${GIT_USER_NAME//[[:space:]]/}" ]]; then
-  git config --global user.name "$OMARCHY_USER_NAME"
+  git config --global user.name "$GIT_USER_NAME"
 fi
 
 if [[ -n "${GIT_USER_EMAIL//[[:space:]]/}" ]]; then
@@ -28,8 +28,7 @@ fi
 mkdir -p ~/.local/share/applications
 
 # Copy over Omarchy configs
-cp -R ./config/* ~/.config/
+# cp -R ./config/* ~/.config/
 
-pacman -S ly
 systemctl enable ly.service
 systemctl disable getty@tty2.service

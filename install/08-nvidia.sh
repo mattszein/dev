@@ -9,6 +9,8 @@
 # Author: https://github.com/Kn0ax
 #
 # ==============================================================================
+#
+yay -S mesa-utils
 
 # --- GPU Detection ---
 if [ -n "$(lspci | grep -i 'nvidia')" ]; then
