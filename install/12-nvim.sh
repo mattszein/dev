@@ -1,3 +1,3 @@
 #!/bin/bash
 
-yay -S --noconfirm --needed nvim
+yay -S --noconfirm --needed neovim

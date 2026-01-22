@@ -1,0 +1,66 @@
+{
+  "placeholder": "Search...",
+  "fullscreen": false,
+  "list": {
+    "height": 500,
+    "always_show": true
+  },
+  "search": {
+    "delay": 100,
+    "hide_icons": false
+  },
+  "providers": {
+    "applications": {
+      "prefix": "",
+      "name": "Applications"
+    },
+    "runner": {
+      "prefix": ">",
+      "name": "Commands"
+    },
+    "dmenu": {
+      "prefix": "dir",
+      "name": "Directory Navigator",
+      "cmd": "bash /usr/local/bin/run-project.sh",
+      "placeholder": "Navigate directories...",
+      "separator": "\n"
+    }
+  },
+  "keybinds": {
+    "up": [
+      "Up",
+      "ctrl+k"
+    ],
+    "down": [
+      "Down",
+      "ctrl+j"
+    ],
+    "pgup": [
+      "Page_Up",
+      "ctrl+u"
+    ],
+    "pgdn": [
+      "Page_Down",
+      "ctrl+d"
+    ],
+    "first": [
+      "Home",
+      "ctrl+Home"
+    ],
+    "last": [
+      "End",
+      "ctrl+End"
+    ],
+    "close": [
+      "Escape",
+      "ctrl+c"
+    ],
+    "activate": [
+      "Return"
+    ],
+    "activate_alt": [
+      "alt+Return"
+    ]
+  },
+  "theme": "default"
+}
