@@ -1,3 +1,3 @@
 #!/bin/bash
 
-yay -S firefox-developer-edition zen-browser-bin
+yay -S --needed firefox zen-browser-bin

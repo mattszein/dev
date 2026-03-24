@@ -5,7 +5,20 @@
 if ! command -v iwctl &>/dev/null; then
   yay -S --noconfirm --needed iwd
   sudo systemctl enable --now iwd.service
+  sudo systemctl enable --now systemd-resolved
 fi
+
+cat >/etc/iwd/main.conf <<'EOF'
+[General]
+EnableNetworkConfiguration=true
+
+[Network]
+NameResolvingService=systemd
+EOF
+
+# DISABLE NetworkManager
+sudo systemctl stop NetworkManager
+sudo systemctl disable NetworkManager
 
 # Fix systemd-networkd-wait-online timeout for multiple interfaces
 # Wait for any interface to be online rather than all interfaces

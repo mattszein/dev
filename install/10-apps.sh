@@ -10,13 +10,6 @@ yay -S --noconfirm --needed \
   lm_sensors \
   gstreamer gst-plugins-bad gst-libav gst-plugins-base gst-plugins-good
 
-# Add screen recorder based on GPU
-if lspci | grep -qi 'nvidia'; then
-  yay -S --noconfirm --needed wf-recorder
-else
-  yay -S --noconfirm --needed wl-screenrec
-fi
-
 rustup default stable
 yay -S --noconfirm --needed ffmpeg 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick
 yay -S --noconfirm --needed yazi nautilus
@@ -46,3 +39,6 @@ systemctl --user start elephant.service
 
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux -O ~/.local/bin/yt-dlp
 chmod a+rx ~/.local/bin/yt-dlp
+
+# Before running AppImages, ensure that FUSE (Filesystem in Userspace) is installed on your system.
+sudo yay -S --noconfirm --needed fuse2

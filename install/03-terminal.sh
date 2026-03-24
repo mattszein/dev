@@ -3,7 +3,7 @@
 yay -S --noconfirm --needed \
   fd fzf ripgrep bat jq \
   wl-clipboard fastfetch btop \
-  man tldr less whois plocate \
+  man less whois plocate \
   ghostty \
   zellij \
   zsh \
@@ -13,3 +13,5 @@ mkdir -p ~/.config/ghostty/
 
 sudo usermod -aG input $USER
 export YDOTOOL_SOCKET=/tmp/.ydotool_socket
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

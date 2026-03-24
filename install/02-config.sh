@@ -26,6 +26,11 @@ mkdir -p ~/.local/share/applications
 # cp -R ./config/* ~/.config/
 
 # Add ly tui display manager
+# yay -S --noconfirm --needed ly
+# systemctl enable ly.service
+# systemctl disable getty@tty2.service
+#
 yay -S --noconfirm --needed ly
-systemctl enable ly.service
-systemctl disable getty@tty2.service
+sudo systemctl disable sddm.service
+sudo systemctl disable getty@tty2.service
+sudo systemctl enable ly@tty2.service
