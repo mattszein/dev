@@ -1,6 +1,8 @@
-yay -S --noconfirm --needed \
+paru -S --noconfirm --needed \
   brightnessctl playerctl pamixer pavucontrol wireplumber \
+  resvg imagemagick \
   fcitx5 fcitx5-gtk fcitx5-qt fcitx5-configtool wl-clip-persist wf-recorder popsicle \
+  yazi nautilus \
   ffmpegthumbnailer \
   mpv evince imv \
   transmission-cli transmission-gtk \
@@ -8,11 +10,16 @@ yay -S --noconfirm --needed \
   inkscape gimp \
   audacity spek-x-git \
   lm_sensors \
-  gstreamer gst-plugins-bad gst-libav gst-plugins-base gst-plugins-good
+  gstreamer gst-plugins-bad gst-libav gst-plugins-base gst-plugins-good \
+  yt-dlp \
+  gemini-cli \
+  opencode \
+  claude-code \
+  obsidian \
+  firefox zen-browser-bin \
+  makemkv mkvtoolnix-gui
 
 rustup default stable
-yay -S --noconfirm --needed ffmpeg 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick
-yay -S --noconfirm --needed yazi nautilus
 
 # Packages known to be flaky or having key signing issues are run one-by-one
 for pkg in spotify discord; do
@@ -20,7 +27,7 @@ for pkg in spotify discord; do
     echo -e "\e[31mFailed to install $pkg. Continuing without!\e[0m"
 done
 
-yay -S --noconfirm --needed \
+paru -S --noconfirm --needed \
   walker elephant elephant-desktopapplications elephant-menus elephant-runner elephant-files elephant-calc elephant-symbols elephant-clipboard elephant-bluetooth elephant-snippets elephant-websearch
 
 elephant service enable
@@ -41,4 +48,4 @@ wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux -O ~
 chmod a+rx ~/.local/bin/yt-dlp
 
 # Before running AppImages, ensure that FUSE (Filesystem in Userspace) is installed on your system.
-sudo yay -S --noconfirm --needed fuse2
+sudo paru -S --noconfirm --needed fuse2
